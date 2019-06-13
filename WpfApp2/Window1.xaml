@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfApp2.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Student" Height="700" Width="800"
+        x:Name="window1">
+
+    <!--<Grid>
+        <TextBox  Name="Textboxask11" BorderBrush="Black" BorderThickness="2" Background="AliceBlue" FontSize="18" Margin="159,32,159,570"></TextBox>
+        <CheckBox  Name="Check11" FontSize="13" Margin="100,112,494,518">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox  Name="Textbox11" Background="LightGray" Margin="159,120,85,480"/>
+
+        <CheckBox  Name="Check22" FontSize="13" Margin="100,213,494,413">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox  Name="Textbox22" Background="LightGray" Margin="159,215,85,380"/>
+        <CheckBox Name="Check33" FontSize="13" Margin="100,317,494,309" Visibility="Hidden">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox  Name="Textbox33" Background="LightGray" Margin="159,316,85,279" Visibility="Hidden"/>
+        <CheckBox  Name="Check44" FontSize="13" Margin="100,415,494,211" Visibility="Hidden">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox   Name="Textbox44" Background="LightGray" Margin="159,414,85,181" Visibility="Hidden"/>
+        <CheckBox  Name="Check55" FontSize="13" Margin="100,513,494,113" Visibility="Hidden">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox  Name="Textbox55" Background="LightGray" Margin="159,514,85,81" Visibility="Hidden"/>
+
+
+        <Button BorderBrush="Black" BorderThickness="3" Background="LightGreen" Name="buttonright" Margin="716,599,10,30" Click="Buttonright_Click">Right</Button>
+        <Button BorderBrush="Black" BorderThickness="3" Background="LightGreen" Name="buttonleft" Margin="10,599,716,30" Click="Buttonleft_Click">Left</Button>
+
+        <Button Margin="20,32,680,595" Name="buttonLoad" BorderBrush="Black" BorderThickness="2" Background="Gray" Click="buttonLoad_Click">Load</Button>
+    </Grid>-->
+    
+
+</Window>

@@ -1,0 +1,122 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="549.674"
+        MinHeight="300"
+        MinWidth="500"
+        Background="LightGray">
+
+    <Viewbox>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="134*"></ColumnDefinition>
+                <ColumnDefinition Width="38*"/>
+                <ColumnDefinition Width="172*"></ColumnDefinition>
+                <ColumnDefinition Width="173*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37*"></RowDefinition>
+                <RowDefinition Height="91*"></RowDefinition>
+                <RowDefinition Height="64*"></RowDefinition>
+                <RowDefinition Height="64*"></RowDefinition>
+                <RowDefinition Height="64*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <DockPanel Name="DockP" Background="Yellow" Grid.Row="0" Grid.ColumnSpan="2">
+                <Label Content="File save in " FontSize="10" Margin="0,-3,0,3" Grid.ColumnSpan="2"  ></Label>
+                <RadioButton Name="radiobuttonxml" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" RenderTransformOrigin="1.03,0.548" Width="53" Grid.ColumnSpan="2" Checked="Radiobuttonxml_Checked" Margin="0,0,0,22">XML</RadioButton>
+                <RadioButton Name="radiobuttonbinary" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" RenderTransformOrigin="1.03,0.548"  Width="48" Checked="Radiobuttonbinary_Checked" Margin="0,0,0,22">Binary</RadioButton>
+
+            </DockPanel>
+
+
+
+
+
+            <TextBox Name="TextboxName" HorizontalAlignment="Left"  Width="138"  Grid.Row="1" Margin="0,0,0,69" Grid.ColumnSpan="2">Name</TextBox>
+
+            <TextBox Name="TextboxProduction" HorizontalAlignment="Left" Width="138" Margin="0,58,0,10" Text="Production" Grid.Row="1" Grid.ColumnSpan="2"/>
+            <ComboBox Name="ComboBoxGanre" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="Ganre" Margin="0,30,34,38" Grid.Row="1" Grid.ColumnSpan="2">
+                <ComboBoxItem Content="Strategy" HorizontalAlignment="Left" Width="136"/>
+                <ComboBoxItem Content="RPG" HorizontalAlignment="Left" Width="136"/>
+                <ComboBoxItem Content="Racing" HorizontalAlignment="Left" Width="136"/>
+                <ComboBoxItem Content="Action" HorizontalAlignment="Left" Width="136"/>
+                <ComboBoxItem Content="Adventure" HorizontalAlignment="Left" Width="136"/>
+                <ComboBoxItem Content="Sports" HorizontalAlignment="Left" Width="136"/>
+                <ComboBoxItem Content="Simulation" HorizontalAlignment="Left" Width="136"/>
+            </ComboBox>
+
+            <TextBox Name="TextboxPrice" Grid.Row="2" Margin="0,0,34,36" Grid.ColumnSpan="2">Price</TextBox>
+            <DatePicker  Name="DatePickerdata" Grid.Row="2" Margin="0,33,10,0" Grid.ColumnSpan="2"/>
+            <Slider  Name="Sliderr" Grid.Row="3" Margin="0,6,10,58" Grid.RowSpan="2" Grid.ColumnSpan="2" Value="5"></Slider>
+            <Label Content="Multiplayer" Grid.Row="3" Margin="0,41,0,23" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <RadioButton Name="RadiobuttonYes" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.ColumnSpan="2">
+                <RadioButton.Content>Yes</RadioButton.Content>
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.828"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0.014"/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Name="RadiobuttonNo" RenderTransformOrigin="0.5,0.5" Content="No" Grid.Row="4" Grid.ColumnSpan="3" Margin="42,2,130,-2">
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.828"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0.014"/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <CheckBox  Name="Checkboxwindows" Content="Windows" FontSize="10" Grid.Row="4" Grid.ColumnSpan="3" Margin="98,6,74,-6" ></CheckBox>
+            <CheckBox  Name="Checkboxlinux" Content="Linux" FontSize="10" Grid.Row="4" Grid.ColumnSpan="3" Margin="98,23,74,-23"/>
+            <CheckBox Name="Checkboxmac" Content="Mac" FontSize="10" Grid.Row="4" Grid.ColumnSpan="3" Margin="98,41,74,-41"/>
+
+            <Button Name="Buttonsave" Grid.Row="4" Content="Save" Margin="0,25,66,21" FontSize="9" Click="ButtonSave_Click"></Button>
+            <Button Name="ButtonClear" Grid.Row="4" Content="Clear" Margin="0,46,66,0" FontSize="9" Click="ButtonClear_Click"></Button>
+            <!--3KOLONKA-->
+            <TextBox Text="{Binding Path=name}" Name="TextboxName2" HorizontalAlignment="Left"  Width="138"  Grid.Row="1" Grid.Column="3" Margin="10,0,0,69"/>
+            <TextBox Text="{Binding Path=ganre}" Name="Textboxcombo2" HorizontalAlignment="Left" VerticalAlignment="Stretch"  Margin="10,30,0,38" Grid.Row="1" Grid.Column="3" Width="138"/>
+            <TextBox Text="{Binding Path=production}" Name="TextboxProduction2" HorizontalAlignment="Left" Width="138" Margin="10,58,0,10"  Grid.Row="1" Grid.Column="3"/>
+            <TextBox Text="{Binding Path=price}" Name="TextboxPrice2" Grid.Row="2" Grid.Column="3" Margin="10,0,24,36"/>
+            <TextBox Text="{Binding Path=datetime}" Name="DatePickerdata2" Grid.Row="2" Grid.Column="3"  Margin="10,38,24,0" Height="26" VerticalAlignment="Top"/>
+            <TextBox  Text="{Binding Path=Rating}" Name="rating2" Grid.Row="3" Grid.Column="3" Margin="10,10,24,28"/>
+            <TextBox Text="{Binding Path=multiplayer}" Name="Multiplayer2" Grid.Row="3" Grid.Column="3" Margin="10,56,24,43" Grid.RowSpan="2"/>
+            <Label Name="Label2" Content="Multiplayer" Grid.Row="3" Grid.Column="3" Margin="53,30,-19,6"/>
+            <Button Name="buttonload" Content="Load" Background="LightBlue" Grid.Column="2" Click="Buttonload_Click" Margin="5,0,12,0"/>
+            <TextBox  Text="{Binding Path=oss}" Name="Multiplayer3" Grid.Row="4" Grid.Column="3" Margin="10,29,24,6"/>
+            <Button Name="buttonup" Content="Prev" Background="LightGreen" Grid.Column="3" Margin="42,0,90,10" Click="Buttonup_Click"/>
+            <Button Name="buttondown" Content="Next" Background="LightGreen" Grid.Column="3"  Margin="92,0,38,10" Click="Buttondown_Click" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.279"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <DataGrid Name="grid" Grid.Column="2" HorizontalAlignment="Left" Height="266" Margin="0,6,0,0" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Top" Width="170" >
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Path=name}"/>
+                    <DataGridTextColumn Header="Ganre" Binding="{Binding Path=ganre}"/>
+                    <DataGridTextColumn Header="Production" Binding="{Binding Path=production}"/>
+                    <DataGridTextColumn Header="Price" Binding="{Binding Path=price}"/>
+                    <DataGridTextColumn Header="Datetime" Binding="{Binding Path=datetime}"/>
+                    <DataGridTextColumn Header="Rating" Binding="{Binding Path=Rating}"/>
+                    <DataGridTextColumn Header="Multipl" Binding="{Binding Path=multiplayer}"/>
+                    <DataGridTextColumn Header="Oss" Binding="{Binding Path=oss}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Viewbox>
+</Window>

@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApp2.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Windowstudent" Height="700" Width="800"
+        Background="LightGray">
+    <Grid>
+
+        <TextBox Text="{Binding Path=Ask}" Name="Textboxask" BorderBrush="Black" BorderThickness="2" Background="AliceBlue" FontSize="18" Margin="159,32,159,570"></TextBox>
+        <CheckBox IsChecked="{Binding Path=Checkfirst}" Name="Check1" FontSize="13" Margin="100,112,494,518">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox Text="{Binding Path=Firstask}" Name="Textbox1" Background="LightGray" Margin="159,120,85,480"/>
+
+        <CheckBox IsChecked="{Binding Path=Checksecond}" Name="Check2" FontSize="13" Margin="100,213,494,413">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox Text="{Binding Path=Secondask}" Name="Textbox2" Background="LightGray" Margin="159,215,85,380"/>
+        <CheckBox IsChecked="{Binding Path=Checkthird}"  Name="Check3" FontSize="13" Margin="100,317,494,309" Visibility="Hidden">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox Text="{Binding Path=Thirdask}" Name="Textbox3" Background="LightGray" Margin="159,316,85,279" Visibility="Hidden"/>
+        <CheckBox IsChecked="{Binding Path=Checkfourth}" Name="Check4" FontSize="13" Margin="100,415,494,211" Visibility="Hidden">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox  Text="{Binding Path=Fourthask}" Name="Textbox4" Background="LightGray" Margin="159,414,85,181" Visibility="Hidden"/>
+        <CheckBox IsChecked="{Binding Path=Checkfifth}" Name="Check5" FontSize="13" Margin="100,513,494,113" Visibility="Hidden">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox Text="{Binding Path=Fifthask}" Name="Textbox5" Background="LightGray" Margin="159,514,85,81" Visibility="Hidden"/>
+        
+        <!--............-->
+        <Button BorderBrush="Black" BorderThickness="2" Name="buttonadd" Background="LightGreen" Margin="23,32,700,600" FontSize="14" Click="Button_Click">Добавить</Button>
+        <Button BorderBrush="Black" BorderThickness="3" Background="LightGreen" Name="buttonright" Margin="716,599,10,30" Click="Buttonright_Click">Right</Button>
+        <Button BorderBrush="Black" BorderThickness="3" Background="LightGreen" Name="buttonleft" Margin="10,599,716,30" Click="Buttonleft_Click">Left</Button>
+        <Button BorderBrush="Black" BorderThickness="2" Background="LightGreen" Name="buttonsave" Margin="326,599,326,30" Click="Buttonsave_Click">Save</Button>
+        <Button BorderBrush="Black" BorderThickness="2" Name="buttonclear" Background="LightGreen" Margin="702,32,22,600" FontSize="14" Click="Buttonclear_Click" >Очистить</Button>
+    </Grid>
+</Window>

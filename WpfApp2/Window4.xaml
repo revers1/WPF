@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApp2.Window4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+      x:Name="winda"  Title="Window4" Height="700" Width="800">
+    <Grid>
+
+
+        <Button BorderBrush="Black" BorderThickness="3" Background="LightGreen" Name="buttonrightt" Margin="711,599,10,30" Click="buttonrightt_Click">Наступне</Button>
+        <Button BorderBrush="Black" BorderThickness="3" Background="LightGreen" Name="buttonleftt" Margin="10,599,704,30" Click="buttonleftt_Click">Попереднє</Button>
+
+
+        <TextBox Text="{Binding Path=Ask}" Name="Textboxask" BorderBrush="Black" BorderThickness="2" Background="AliceBlue" FontSize="18" Margin="159,32,159,570" IsEnabled="False"></TextBox>
+        <CheckBox IsChecked="{Binding Path=Checkfirst}" Name="Check11" FontSize="13" Margin="100,112,494,518">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox Text="{Binding Path=Firstask}" Name="Textbox1" Background="LightGray" Margin="159,120,85,480" BorderBrush="Black" BorderThickness="2" IsEnabled="False"/>
+
+        <CheckBox IsChecked="{Binding Path=Checksecond}" Name="Check22" FontSize="13" Margin="100,213,494,413">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox Text="{Binding Path=Secondask}" Name="Textbox2" Background="LightGray" Margin="159,215,85,380" BorderBrush="Black" BorderThickness="2" IsEnabled="False"/>
+        <CheckBox  IsChecked="{Binding Path=Checkthird}" Name="Check33" FontSize="13" Margin="100,317,494,309" Visibility="Visible">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox Text="{Binding Path=Thirdask}" Name="Textbox3" Background="LightGray" Margin="159,316,85,279" Visibility="Visible" BorderBrush="Black" BorderThickness="2" IsEnabled="False"/>
+        <CheckBox IsChecked="{Binding Path=Checkfourth}"  Name="Check44" FontSize="13" Margin="100,415,494,211" Visibility="Visible">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox  Text="{Binding Path=Fourthask}" Name="Textbox4" Background="LightGray" Margin="159,414,85,181" Visibility="Visible" BorderBrush="Black" BorderThickness="2" IsEnabled="False"/>
+        <CheckBox IsChecked="{Binding Path=Checkfifth}"  Name="Check55" FontSize="13" Margin="100,513,494,113" Visibility="Visible">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <TextBox Text="{Binding Path=Fifthask}" Name="Textbox5" Background="LightGray" Margin="159,514,85,81" Visibility="Visible" BorderBrush="Black" BorderThickness="2" IsEnabled="False"/>
+        <Button Background="LightGreen" Margin="344,599,344,30" Click="Button_Click">Відповісти</Button>
+        <Button Name="buttonfinishtest" Background="LightPink" BorderBrush="Black" BorderThickness="2" Margin="678,7,10,622" Click="buttonfinishtest_Click">Завершити тест</Button>
+
+    </Grid>
+</Window>
